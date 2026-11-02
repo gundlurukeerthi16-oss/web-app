@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IPL 2026 | Official Stadium Ticket Portal</title>
+  <style>
+    :root {
+      --primary: #003874;
+      --accent: #ff6a00;
+      --dark: #1b2430;
+      --light-bg: #f5f7fa;
+      --border: #d0d7de;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: #ffffff; color: var(--dark); line-height: 1.6; }
+    header { background-color: var(--primary); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+    nav { max-width: 1100px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; }
+    .brand { font-size: 1.4rem; font-weight: 800; color: #fff; text-decoration: none; }
+    .brand span { color: var(--accent); }
+    nav ul { display: flex; list-style: none; gap: 1.25rem; }
+    nav a { color: #fff; text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+    nav a:hover { color: var(--accent); }
+    section { max-width: 1100px; margin: auto; padding: 3.5rem 1.5rem; }
+    .section-title { font-size: 1.85rem; margin-bottom: 1.5rem; text-align: center; color: var(--primary); }
+    .hero { background: linear-gradient(rgba(0,56,116,0.85), rgba(0,56,116,0.85)), #002244; color: #fff; text-align: center; padding: 5rem 1.5rem; }
+    .hero h1 { font-size: 2.6rem; margin-bottom: 0.75rem; }
+    .hero p { font-size: 1.2rem; margin-bottom: 2rem; color: #e2e8f0; }
+    .btn-group { display: flex; gap: 1rem; justify-content: center; }
+    .btn { display: inline-block; padding: 0.7rem 1.6rem; border-radius: 4px; text-decoration: none; font-weight: 600; cursor: pointer; border: none; font-size: 0.95rem; }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-secondary { background: transparent; color: #fff; border: 2px solid #fff; }
+    .about-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .info-card { background: var(--light-bg); padding: 1.5rem; border-radius: 6px; border-left: 5px solid var(--accent); }
+    .info-card h3 { margin-bottom: 0.75rem; color: var(--primary); }
+    .info-card ul { margin-left: 1.25rem; }
+    .filter-bar { margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.75rem; }
+    .filter-bar select { padding: 0.5rem; border-radius: 4px; border: 1px solid var(--border); }
+    .table-container { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; text-align: left; background: #fff; }
+    th, td { padding: 0.9rem; border: 1px solid var(--border); font-size: 0.95rem; }
+    th { background: #eef2f6; color: var(--primary); }
+    .booking-wrapper { display: grid; grid-template-columns: 3fr 2fr; gap: 2rem; align-items: start; }
+    .booking-form { background: var(--light-bg); padding: 2rem; border-radius: 6px; }
+    .field { margin-bottom: 1rem; }
+    .field label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.35rem; }
+    .field input, .field select { width: 100%; padding: 0.65rem; border: 1px solid var(--border); border-radius: 4px; }
+    .summary-box { border: 1px solid var(--border); border-radius: 6px; padding: 1.75rem; background: #fff; }
+    .summary-line { display: flex; justify-content: space-between; padding: 0.45rem 0; border-bottom: 1px dashed var(--border); font-size: 0.9rem; }
+    .summary-line.grand-total { border-top: 2px solid var(--primary); border-bottom: none; font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-top: 0.75rem; padding-top: 0.75rem; }
+    .guideline-items { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+    .rule-card { padding: 1.5rem; border-radius: 6px; border: 1px solid var(--border); background: #fff; }
+    .rule-card h4 { color: var(--accent); margin-bottom: 0.5rem; font-size: 1.1rem; }
+    footer { background: var(--dark); color: #94a3b8; text-align: center; padding: 2rem 1rem; font-size: 0.9rem; }
+    @media (max-width: 768px) { .booking-wrapper { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <a href="#" class="brand">IPL <span>2026</span></a>
+      <ul>
+        <li><a href="#matches">Matches</a></li>
+        <li><a href="#book-ticket">Book Ticket</a></li>
+        <li><a href="#my-bookings">My Bookings</a></li>
+        <li><a href="#guidelines">Guidelines</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero / Banner Section -->
+    <section class="hero">
+      <h1>TATA IPL 2026</h1>
+      <p>Experience The Stadium Energy Live!</p>
+      <div class="btn-group">
+        <a href="#matches" class="btn btn-secondary">View Schedule</a>
+        <a href="#book-ticket" class="btn btn-primary">Book Ticket</a>
+      </div>
+    </section>
+
+    <!-- About IPL 2026 Section -->
+    <section id="about">
+      <h2 class="section-title">About IPL 2026</h2>
+      <div class="about-cards">
+        <article class="info-card">
+          <h3>Popular Franchises</h3>
+          <ul>
+            <li>Royal Challengers Bengaluru</li>
+            <li>Chennai Super Kings</li>
+            <li>Mumbai Indians</li>
+            <li>Kolkata Knight Riders</li>
+          </ul>
+        </article>
+        <article class="info-card">
+          <h3>Major Stadium Venues</h3>
+          <ul>
+            <li>M. Chinnaswamy Stadium, Bengaluru</li>
+            <li>Wankhede Stadium, Mumbai</li>
+            <li>M. A. Chidambaram Stadium, Chennai</li>
+            <li>Eden Gardens, Kolkata</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Match Schedule Section -->
+    <section id="matches">
+      <h2 class="section-title">Match Schedule</h2>
+      <div class="filter-bar">
+        <label for="filter-team">Filter by Team:</label>
+        <select id="filter-team" name="filter-team">
+          <option value="all">All Teams</option>
+          <option value="rcb">Royal Challengers Bengaluru</option>
+          <option value="csk">Chennai Super Kings</option>
+          <option value="mi">Mumbai Indians</option>
+        </select>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Match No.</th>
+              <th>Teams</th>
+              <th>Date &amp; Time</th>
+              <th>Venue</th>
+              <th>General</th>
+              <th>Premium</th>
+              <th>VIP</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Match 01</td>
+              <td>CSK vs RCB</td>
+              <td>Mar 28, 2026 | 7:30 PM</td>
+              <td>M. A. Chidambaram Stadium</td>
+              <td>₹1,200</td>
+              <td>₹3,500</td>
+              <td>₹8,000</td>
+              <td><a href="#book-ticket" class="btn btn-primary">Book</a></td>
+            </tr>
+            <tr>
+              <td>Match 02</td>
+              <td>MI vs KKR</td>
+              <td>Mar 29, 2026 | 7:30 PM</td>
+              <td>Wankhede Stadium</td>
+              <td>₹1,500</td>
+              <td>₹4,000</td>
+              <td>₹9,500</td>
+              <td><a href="#book-ticket" class="btn btn-primary">Book</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Ticket Booking Form & Summary Section -->
+    <section id="book-ticket">
+      <h2 class="section-title">Ticket Booking</h2>
+      <div class="booking-wrapper">
+        <form class="booking-form" action="#" method="POST">
+          <div class="field">
+            <label for="select-match">Select Match</label>
+            <select id="select-match" name="match" required>
+              <option value="">-- Choose Match --</option>
+              <option value="1">Match 01: CSK vs RCB</option>
+              <option value="2">Match 02: MI vs KKR</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="stand-type">Stand Category</label>
+            <select id="stand-type" name="stand" required>
+              <option value="gen">General Stand (₹1,200)</option>
+              <option value="prem">Premium Stand (₹3,500)</option>
+              <option value="vip">VIP Lounge (₹8,000)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="ticket-count">Number of Tickets</label>
+            <input type="number" id="ticket-count" name="quantity" min="1" max="6" value="1" required>
+          </div>
+          <div class="field">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="name" placeholder="John Doe" required>
+          </div>
+          <div class="field">
+            <label for="email-addr">Email Address</label>
+            <input type="email" id="email-addr" name="email" placeholder="john@example.com" required>
+          </div>
+          <div class="field">
+            <label for="phone-no">Phone Number</label>
+            <input type="tel" id="phone-no" name="phone" placeholder="9876543210" required>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Confirm Booking</button>
+        </form>
+        <aside class="summary-box">
+          <h3 style="margin-bottom: 0.5rem; color: var(--primary);">Booking Summary</h3>
+          <div class="summary-line"><span>Match:</span><strong>CSK vs RCB</strong></div>
+          <div class="summary-line"><span>Stand:</span><strong>General Stand</strong></div>
+          <div class="summary-line"><span>Price / Ticket:</span><strong>₹1,200</strong></div>
+          <div class="summary-line"><span>Quantity:</span><strong>1</strong></div>
+          <div class="summary-line grand-total"><span>Total Payable:</span><strong>₹1,200</strong></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- My Bookings Section -->
+    <section id="my-bookings">
+      <h2 class="section-title">My Ticket Bookings</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Booking ID</th>
+              <th>Match Details</th>
+              <th>Stand</th>
+              <th>Seats</th>
+              <th>Amount</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="6" style="text-align: center; color: #64748b; padding: 2rem;">No past tickets found. Complete your reservation above.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Guidelines Section -->
+    <section id="guidelines">
+      <h2 class="section-title">Spectator Guidelines</h2>
+      <div class="guideline-items">
+        <article class="rule-card">
+          <h4>Ticket Verification</h4>
+          <p>Scan your digital QR pass or physical ticket at the turnstiles before entry.</p>
+        </article>
+        <article class="rule-card">
+          <h4>ID Proof Requirement</h4>
+          <p>Carry a government photo ID matching the name entered during the ticket booking.</p>
+        </article>
+        <article class="rule-card">
+          <h4>Prohibited Items</h4>
+          <p>Power banks, cameras, outside food, and metal coins are prohibited inside stadiums.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Indian Premier League (IPL) Ticket Portal. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
